@@ -76,11 +76,61 @@ ul {
 <h2>気軽なものづくりの祭典、NT鯖江2021</h2>
 NT鯖江は、誰でもふらっと見に来ていただける「技術」を楽しむ祭典です。<br>
 開催日: 2021/11/26-27 場所: <a href=https://cybervalley.jp/>コネクトフリー鯖江総合開発センター / CyberValley, Japan</a><br>
-(26日は18:30-22:00の<a href=https://cybervalley.jp/>CyberFriday</a>と合同開催, 27日は10:00-15:00予定)<br>
-<a href="http://wiki.nicotech.jp/nico_tech/index.php?NT%E9%AF%96%E6%B1%9F2021">出展者募集中</a>！<br>
-※「NT」とは、<a href=http://wiki.nicotech.jp/nico_tech/index.php?%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E6%8A%80%E8%A1%93%E9%83%A8%E3%80%80%E3%81%BE%E3%81%A8%E3%82%81wiki>ニコニコ技術部（Nico-TECH:）</a>から始まったオープンな技術系イベント<br>
-NT鯖江では「なにか(N) つくろう(T)」の略としています（ハッシュタグ <a href=https://twitter.com/search?q=%23NT%E9%AF%96%E6%B1%9F&src=typed_query>#NT鯖江</a>）<br>
+(26日は18:30-22:00の<a href=https://cybervalley.jp/>CyberFriday</a>と合同開催, 27日は10:00-15:00) (<a href="http://wiki.nicotech.jp/nico_tech/index.php?NT%E9%AF%96%E6%B1%9F2021">出展者</a>)<br>
 </div>
+
+<div id=player></div><br>
+<button id=btnseek1>テクノロジー絵本</button>
+<button id=btnseek2>バランスボールお絵かき</button>
+<button id=btnseek3>自動演奏ロボット</button>
+<button id=btnseek4>輪ゴム鉄砲輪とデジタル的</button>
+<button id=btnseek5>ボードゲーム用サイコロタワー</button>
+
+<br>
+<br>※「NT」とは、<a href=http://wiki.nicotech.jp/nico_tech/index.php?%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E6%8A%80%E8%A1%93%E9%83%A8%E3%80%80%E3%81%BE%E3%81%A8%E3%82%81wiki>ニコニコ技術部（Nico-TECH:）</a>から始まったオープンな技術系イベント<br>
+NT鯖江では「なにか(N) つくろう(T)」の略としています（ハッシュタグ <a href=https://twitter.com/search?q=%23NT%E9%AF%96%E6%B1%9F&src=typed_query>#NT鯖江</a>）<br>
+
+<script>
+const videoId = '09CoA73mXmY';
+
+const tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+const firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+let player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '360',
+    width: '640',
+    videoId,
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  });
+}
+function onPlayerReady(event) {
+  event.target.playVideo();
+}
+let done = false;
+function onPlayerStateChange(event) {
+  if (event.data == YT.PlayerState.PLAYING && !done) {
+    done = true;
+  }
+}
+onload = () => {
+  const seekTo = (n) => {
+    player.playVideo();
+    player.seekTo(n, true);
+  };
+  btnseek1.onclick = () => seekTo(0);
+  btnseek2.onclick = () => seekTo(3.3);
+  btnseek3.onclick = () => seekTo(7);
+  btnseek4.onclick = () => seekTo(15);
+  btnseek5.onclick = () => seekTo(19);
+}
+</script>
 
 <h2>開催記録 NT鯖江2020</h2>
 <div id="result">
