@@ -1,0 +1,31 @@
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about>.title {
+  margin: 32px auto 16px;
+  font-size: 24px;
+}
+
+.about>.description {
+  max-width: 80%;
+  text-align: center;
+}
+
+.about>.sitemap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about>.sitemap>a {
+  margin: 8px 16px;
+  max-width: 200px;
+}
+
+.sitemap>a>img {
+  width: 200px;
+}

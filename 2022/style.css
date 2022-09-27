@@ -1,0 +1,43 @@
+/*
+  ニコモジフォント:
+    font-family: "Nico Moji";
+  はんなり明朝
+    font-family: "Hannari";
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Yuji Syuku', serif;
+  font-size: 16px;
+  --dark-green: #435d55;
+  --beige: #f4e7ce;
+  --red: #bc0000;
+  --blue: #02129f;
+}
+
+a {
+  color: var(--dark-green);
+  text-decoration: none;
+}
+
+.red {
+  color: var(--red);
+}
+
+.blue {
+  color: var(--blue);
+}
+
+a[href^="http"]:after,
+a[href^="//"]:after {
+  margin: 0 0 0 3px;
+  font-family: "Font Awesome 5 Free";
+  content: '\f35d';
+  font-weight: 900;
+}
