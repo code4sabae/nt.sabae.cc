@@ -21,6 +21,13 @@
   justify-content: center;
 }
 
+@media screen and (max-width: 696px) {
+  .about>.sitemap {
+    margin-top: 16px;
+    flex-direction: column;
+  }
+}
+
 .about>.sitemap>a {
   margin: 8px 16px;
   max-width: 200px;
