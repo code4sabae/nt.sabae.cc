@@ -34,10 +34,3 @@ a {
   color: var(--blue);
 }
 
-a[href^="http"]:after,
-a[href^="//"]:after {
-  margin: 0 0 0 3px;
-  font-family: "Font Awesome 5 Free";
-  content: '\f35d';
-  font-weight: 900;
-}
