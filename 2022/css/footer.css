@@ -1,0 +1,13 @@
+footer {
+  width: 100%;
+  padding: 16px 0;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+footer>.footer-text {
+  font-size: 12px;
+}
+

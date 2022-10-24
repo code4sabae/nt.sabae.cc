@@ -1,5 +1,6 @@
 .about {
   width: 100%;
+  padding-bottom: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
