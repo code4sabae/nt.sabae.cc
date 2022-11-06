@@ -19,8 +19,14 @@
   align-items: center;
 }
 
+@media screen and (max-width: 696px) {
+  .poster>.poster-wrapper {
+    flex-direction: column;
+  }
+}
+
 .poster>.poster-wrapper>img {
-  width: calc(50%-32px);
+  width: 300px;
   padding: 0 8px;
 }
 
