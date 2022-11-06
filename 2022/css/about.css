@@ -27,7 +27,7 @@
 @media screen and (max-width: 696px) {
   .about>.sitemap {
     margin-top: 16px;
-    flex-direction: column;
+    grid-template-columns: 200px;
   }
 }
 
