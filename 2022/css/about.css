@@ -20,7 +20,7 @@
   margin-top: 16px;
   display: grid;
   grid-template-columns: repeat(3, 200px);
-  grid-template-rows: auto;
+  grid-template-rows: 98px;
   gap: 16px;
 }
 
